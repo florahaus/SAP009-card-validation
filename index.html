@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Validação</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js" type="module"></script>
+  </head>
+  <body>
+    
+    <header>
+      <section class="corpo">
+      <h1> <i>Bom te ver! 🥰</i></h1>
+      <h2> 💳Valide aqui seu cartão de crédito internacional 🌎✈</h2>
+      <div class="card-silhouette"></div>
+    </section>
+  </header>
+    <main>
+      <form id="cartão" onsubmit="submitForm(); return false;">
+      Número do cartão: <br>
+      <input type="text" placeholder="Insira o número do seu cartão"  name="numero_do_cartão" id="numCartao" required><br>
+      <!-- Data de vencimento:<br>
+      <input type="text" placeholder="Insira a data de vencimento" name="data_de_vencimento" id="data_de_vencimento" required><br>
+      Código de Segurança:<br>
+      <input type="text" placeholder="Insira código de segurança"  name="codigo_de_segurança" id="codigo_de_segurança" required><br> -->
+      <br>
+      <button id="botao">
+        verificar
+      </button>
+      <p id="mensagem"></p>
+    </form>
+  </main>
+ 
+ 
+
+    <footer></footer>
+    
+  </body>
+</html>
