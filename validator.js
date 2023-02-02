@@ -21,16 +21,16 @@ const validator = {
       total = total + reverterNumero[indice];
     }
     return total % 10 === 0
-  }
-}
+  },
     
-//    // maskify(creditCardNumber) {
+  maskify(digito){
         
-//         const fourDigits = creditCardNumber.slice(-4)
-//         const qtdMask = creditCardNumber.length - 4
-//         const mask = "#".repeat(qtdMask) + fourDigits
-//         return mask
-    
+    const ultQuatro = digito.slice(-4)
+    const qntTotal = digito.length - 4
+    const camuflar = "#".repeat(qntTotal) + ultQuatro
+    return camuflar
+  }
+} 
     
     
     
