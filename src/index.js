@@ -1,18 +1,16 @@
 import validator from "./validator.js";
-
-
-const inputNumeros = document.getElementById ("numCartao") 
-const button = document.getElementById   ("botao")
-const mensagem = document.getElementById ("mensagem")
-
-button.addEventListener("click",verificado);
-
-
-function verificado (e){
-
+function validacao (e){
   e.preventDefault();
-  const  digito = inputNumeros.value
+
+  const numCard = document.getElementById ("cartao")
+  
+  const aviso = document.getElementById ("mensagem")
+
+  const  digito = numCard.value;
   const validar = validator.isValid(digito);
+  const mascara = validator.maskify(digito);
+  numCard.value = mascara
+  
 
     
   if (
@@ -22,22 +20,20 @@ function verificado (e){
       digito === "00000000000000" ||
       digito.length <= 13
   ) {
-    return (mensagem.innerHTML = "Por favor, digite o número do cartão!");
+    return (aviso.innerHTML = "Insira o número para validar");
   }  
   else if (validar === true) {
-    return (mensagem.innerHTML = "Cartão válido!");
+    return (aviso.innerHTML = `"Seu cartão está válido!" ${validator.maskify(digito)}`);
   }
   else if (!validar) {  
-    return (mensagem.innerHTML = "Cartão inválido. Digite novamente!");
+    return (aviso.innerHTML = `"Cartão inválido! Tente novamente." ${validator.maskify(digito)}`);
   } 
 
-//   else if (validator === true) {
-//   return (messagem.innerHTML=`Cartão válido ${validator.maskify(digito)} `)
-
-//   }
- 
-//   else if (!validator === true)  {
-//  return(mensagem.innerHTML = 'Cartão inválido')
-
-// }
+  
+  
 }
+const button = document.getElementById   ("botao")
+button.addEventListener("click",validacao);
+
+  
+
