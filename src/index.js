@@ -11,8 +11,6 @@ function validacao (e){
   const mascara = validator.maskify(digito);
   numCard.value = mascara
   
-
-    
   if (
     digito.trim() === "" ||    
       digito === "0000000000000000" ||
@@ -27,10 +25,7 @@ function validacao (e){
   }
   else if (!validar) {  
     return (aviso.innerHTML = `"Cartão inválido! Tente novamente." ${validator.maskify(digito)}`);
-  } 
-
-  
-  
+  }   
 }
 const button = document.getElementById   ("botao")
 button.addEventListener("click",validacao);

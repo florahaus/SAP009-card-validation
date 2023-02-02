@@ -1,18 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 header{
   background-color:rgb(154, 201, 59);
-  border: hidden;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  border:rgb(154, 201, 59);
+  border-style:initial;
+  padding-top: 0,25px;
+  padding-bottom: 0px;
+  border-radius: 0px;
+  display: flex;
+align-items: center;
+justify-content: center;
 }
-body {
-    background-color: #4b2f97;
-  }
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
-  h1, h2 {
+}
+  
+  h1 {
+    text-align:center;
+    color: rgb(95, 25, 194);
+    font-family: 'Aboreto', cursive;
+     font-size: 39px;  
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 5px;
+  
+   
+  }
+  .titulo{
+    background-color: #3e228b;
     text-align: center;
-    color: rgb(27, 113, 183);
+    color: #9cc6e8;
+    font-family:'PT Mono', monospace;
+
   }
-  
+  body {
+    background-color: #4b2f97;
+}
   form {
     width: 500px;
     margin: 0 auto; 
@@ -20,7 +47,6 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px #4b138b;
-    color
   }
   .botaoEnviar:hover{
     background: rgb(27, 113, 183); 
@@ -49,7 +75,7 @@ body {
   .card-silhouette {
     width: 500px;
     height: 300px;
-    margin: 20px auto;
+    margin: auto;
     background-image: url('./nova.png');
     background-repeat: no-repeat;
     background-position: center;
