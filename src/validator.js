@@ -23,14 +23,19 @@ const validator = {
     return total % 10 === 0
   },
     
-  maskify(digito){
-        
-    const ultQuatro = digito.slice(-4)
-    const qntTotal = digito.length - 4
-    const camuflar = "#".repeat(qntTotal) + ultQuatro
-    return camuflar
+  maskify(digito) {
+    if (digito.length <= 4) {
+      return digito;
+    }
+  
+    const qntTotal = digito.length - 4;
+    const camuflar = "#";
+    const ultQuatro = digito.substr(-4);
+    const camERep = camuflar.repeat(qntTotal) + ultQuatro;
+    return camERep;
   }
-} 
+}
+ 
     
     
     
