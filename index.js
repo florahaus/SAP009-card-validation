@@ -9,8 +9,8 @@ function validacao(e) {
   const digito = numCard.value;
   
   if (digito.trim() === "" || digito.length <= 4) {
-    aviso.innerHTML = "Insira o número do cartão para validar";
-    return;
+    aviso.innerHTML = "digito";
+
   }
 
   const validar = validator.isValid(digito);
